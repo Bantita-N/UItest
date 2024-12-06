@@ -3,11 +3,11 @@ describe('UI Test', () => {
         // Launch browser
         cy.visit('http://automationexercise.com');
 
-        // 'Signup / Login' 
+        // Click 'Signup / Login' 
         cy.contains('Signup / Login').click();
 
         // Enter Name and Email Address
-        cy.get('input[name="name"]').type('Test User');
+        cy.get('[data-qa="signup-name"]').type('Test User');
         cy.get('[data-qa="signup-email"]').type('test@exampletest.com');
 
         // Click 'Signup' 
